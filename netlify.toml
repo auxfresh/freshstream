@@ -7,8 +7,33 @@
   NODE_VERSION = "20"
 
 [[redirects]]
-  from = "/api/*"
-  to = "/.netlify/functions/:splat"
+  from = "/api/matches/featured"
+  to = "/.netlify/functions/matches-featured"
+  status = 200
+
+[[redirects]]
+  from = "/api/matches/live"
+  to = "/.netlify/functions/matches-live"
+  status = 200
+
+[[redirects]]
+  from = "/api/matches/upcoming"
+  to = "/.netlify/functions/matches-upcoming"
+  status = 200
+
+[[redirects]]
+  from = "/api/matches/:id"
+  to = "/.netlify/functions/matches-id/:id"
+  status = 200
+
+[[redirects]]
+  from = "/api/matches"
+  to = "/.netlify/functions/matches"
+  status = 200
+
+[[redirects]]
+  from = "/api/teams"
+  to = "/.netlify/functions/teams"
   status = 200
 
 [[redirects]]
