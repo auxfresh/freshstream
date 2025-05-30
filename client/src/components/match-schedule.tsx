@@ -1,8 +1,11 @@
 import { useQuery } from "@tanstack/react-query";
+import { Link } from "wouter";
 import { type MatchWithTeams } from "@shared/schema";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
+import { Play } from "lucide-react";
 
 export default function MatchSchedule() {
   const { data: matches, isLoading } = useQuery<MatchWithTeams[]>({
@@ -60,6 +63,7 @@ export default function MatchSchedule() {
                   <th className="text-left py-4 px-6 font-semibold">Match</th>
                   <th className="text-left py-4 px-6 font-semibold">Competition</th>
                   <th className="text-left py-4 px-6 font-semibold">Status</th>
+                  <th className="text-left py-4 px-6 font-semibold">Action</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-700">
@@ -83,6 +87,8 @@ export default function MatchSchedule() {
                         return <Badge className="bg-accent text-black">Available</Badge>;
                     }
                   };
+
+                  const isPsgInterMatch = match.homeTeam.name === "Paris Saint-Germain" && match.awayTeam.name === "Inter Milan";
 
                   return (
                     <tr key={match.id} className="hover:bg-gray-800 transition-colors">
@@ -115,6 +121,16 @@ export default function MatchSchedule() {
                       </td>
                       <td className="py-4 px-6 text-gray-300">{match.competition}</td>
                       <td className="py-4 px-6">{getStatusBadge()}</td>
+                      <td className="py-4 px-6">
+                        {isPsgInterMatch && match.status === "live" && (
+                          <Link href={`/match/${match.id}`}>
+                            <Button size="sm" className="bg-primary text-white hover:bg-primary/90">
+                              <Play className="w-3 h-3 mr-1" />
+                              Watch Live
+                            </Button>
+                          </Link>
+                        )}
+                      </td>
                     </tr>
                   );
                 })}

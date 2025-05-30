@@ -48,7 +48,9 @@ export class MemStorage implements IStorage {
       { name: "Manchester City", league: "Premier League", logo: "https://images.unsplash.com/photo-1508768787810-6adc1f613514", wins: 20, draws: 4, losses: 2, primaryColor: "#6CABDD" },
       { name: "Manchester United", league: "Premier League", logo: "https://images.unsplash.com/photo-1516832970803-325be7a92aa5", wins: 14, draws: 8, losses: 4, primaryColor: "#FF0000" },
       { name: "Liverpool FC", league: "Premier League", logo: "https://images.unsplash.com/photo-1574629810360-7efbbe195018", wins: 16, draws: 6, losses: 4, primaryColor: "#C8102E" },
-      { name: "Tottenham", league: "Premier League", logo: "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d", wins: 14, draws: 6, losses: 6, primaryColor: "#132257" }
+      { name: "Tottenham", league: "Premier League", logo: "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d", wins: 14, draws: 6, losses: 6, primaryColor: "#132257" },
+      { name: "Paris Saint-Germain", league: "Ligue 1", logo: "https://images.unsplash.com/photo-1579952363873-27d3bfad9c0d", wins: 22, draws: 3, losses: 1, primaryColor: "#004170" },
+      { name: "Inter Milan", league: "Serie A", logo: "https://images.unsplash.com/photo-1593087899067-5cf5ac2861d2", wins: 19, draws: 5, losses: 2, primaryColor: "#0068A8" }
     ];
 
     sampleTeams.forEach(team => this.createTeam(team));
@@ -92,6 +94,20 @@ export class MemStorage implements IStorage {
         venue: "Etihad Stadium",
         competition: "Premier League",
         streamUrl: "https://example.com/stream3",
+        featured: false
+      },
+      {
+        homeTeamId: 7, // Paris Saint-Germain
+        awayTeamId: 8, // Inter Milan
+        homeScore: 1,
+        awayScore: 1,
+        status: "live",
+        matchTime: "68:45",
+        startTime: new Date(now.getTime() - 1.2 * 60 * 60 * 1000), // 1.2 hours ago
+        venue: "Parc des Princes",
+        competition: "Champions League",
+        streamUrl: "https://example.com/stream4",
+        viewerCount: 35890,
         featured: false
       }
     ];
