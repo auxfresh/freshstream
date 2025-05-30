@@ -47,19 +47,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  app.get("/api/matches/:id", async (req, res) => {
-    try {
-      const id = parseInt(req.params.id);
-      const match = await storage.getMatchWithTeams(id);
-      if (!match) {
-        return res.status(404).json({ message: "Match not found" });
-      }
-      res.json(match);
-    } catch (error) {
-      res.status(500).json({ message: "Failed to fetch match" });
-    }
-  });
-
+  // Featured, live, and upcoming matches need to come before the parameterized route
   app.get("/api/matches/featured", async (req, res) => {
     try {
       const match = await storage.getFeaturedMatch();
@@ -87,6 +75,19 @@ export async function registerRoutes(app: Express): Promise<Server> {
       res.json(matches);
     } catch (error) {
       res.status(500).json({ message: "Failed to fetch upcoming matches" });
+    }
+  });
+
+  app.get("/api/matches/:id", async (req, res) => {
+    try {
+      const id = parseInt(req.params.id);
+      const match = await storage.getMatchWithTeams(id);
+      if (!match) {
+        return res.status(404).json({ message: "Match not found" });
+      }
+      res.json(match);
+    } catch (error) {
+      res.status(500).json({ message: "Failed to fetch match" });
     }
   });
 
