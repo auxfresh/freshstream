@@ -60,12 +60,12 @@ export class MemStorage implements IStorage {
     const sampleMatches: InsertMatch[] = [
       {
         homeTeamId: 4, // Manchester United
-        awayTeamId: 5, // Liverpool FC
-        homeScore: 2,
+        awayTeamId: 6, // Tottenham
+        homeScore: 0,
         awayScore: 1,
         status: " notlive",
-        matchTime: "76:23",
-        startTime: new Date(now.getTime() - 2 * 60 * 60 * 1000), // 2 hours ago
+        matchTime: "95:00",
+        startTime: new Date(now.getTime() - 2 * 60 * 60 * 1000), // 10 days ago
         venue: "Old Trafford",
         competition: "Premier League",
         streamUrl: "https://example.com/stream1",
@@ -77,9 +77,9 @@ export class MemStorage implements IStorage {
         awayTeamId: 2, // Chelsea FC
         homeScore: 1,
         awayScore: 0,
-        status: "live",
+        status: "upcoming",
         matchTime: "87:15",
-        startTime: new Date(now.getTime() - 1.5 * 60 * 60 * 1000), // 1.5 hours ago
+        startTime: new Date(now.getTime() - 1.5 * 60 * 60 * 1000), // 13.5 hours from now
         venue: "Emirates Stadium",
         competition: "Premier League",
         streamUrl: "https://example.com/stream2",
