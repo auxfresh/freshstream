@@ -40,6 +40,11 @@ export default function Footer() {
             <p className="text-gray-400 text-sm">
               The ultimate destination for live football streaming with HD quality and ultra-low latency.
             </p>
+                      <div className="flex items-center space-x-4">
+            <Button className="bg-primary text-white hover:bg-primary/90 transition-all">
+              Subscribe
+            </Button>
+            
           </div>
           
           <div>
