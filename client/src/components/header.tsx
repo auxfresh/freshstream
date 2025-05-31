@@ -17,12 +17,12 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center space-x-8">
-            <Link href="client/stream1.html">
+            <a href="client/stream1.html">
               <div className="flex items-center space-x-2 cursor-pointer">
                 <Play className="text-primary text-2xl" />
                 <span className="text-xl font-bold">Fresh Stream</span>
               </div>
-            </Link>
+            </a>
             <nav className="hidden md:flex space-x-6">
               {navigation.map((item) => (
                 <Link key={item.name} href={item.href}>
