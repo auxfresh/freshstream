@@ -41,9 +41,13 @@ export default function Header() {
           </div>
           
           <div className="flex items-center space-x-4">
-            <Button className="bg-primary text-white hover:bg-primary/90 transition-all">
-              Subscribe
-            </Button>
+  <Button
+    className="bg-primary text-white hover:bg-primary/90 transition-all"
+    onClick={() => window.open('https://freshhub.netlify.app/stream.html', '_blank')}
+  >
+    Subscribe
+  </Button>
+</div>
             
             <Sheet>
               <SheetTrigger asChild>
