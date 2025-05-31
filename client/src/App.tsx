@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Home from "@/pages/home";
 import Teams from "@/pages/teams";
+import Stream from "@/pages/stream1";
 import Match from "@/pages/match";
 import NotFound from "@/pages/not-found";
 import { ErrorBoundary } from "react-error-boundary";
@@ -31,6 +32,7 @@ function Router() {
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/teams" component={Teams} />
+      <Route path="/stream1" component={Stream} />
       <Route path="/match/:id" component={Match} />
       <Route component={NotFound} />
     </Switch>
