@@ -40,16 +40,25 @@ export default function Header() {
             </nav>
           </div>
           
+          
           <div className="flex items-center space-x-4">
-  <a
-  href="https://example.com"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="bg-black text-orange-500 px-4 py-2 rounded-md border border-orange-500 hover:bg-orange-500 hover:text-black transition"
->
-  Visit Website
-</a>
-</div>
+import React from "react";
+
+const ExternalLinkButton: React.FC = () => {
+  return (
+    <a
+      href="https://example.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-block bg-black text-orange-500 px-4 py-2 rounded-md border border-orange-500 hover:bg-orange-500 hover:text-black transition"
+    >
+      Visit Website
+    </a>
+  );
+};
+
+export default ExternalLinkButton;
+          </div>
             
             <Sheet>
               <SheetTrigger asChild>
