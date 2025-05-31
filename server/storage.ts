@@ -63,7 +63,7 @@ export class MemStorage implements IStorage {
         awayTeamId: 5, // Liverpool FC
         homeScore: 2,
         awayScore: 1,
-        status: "live",
+        status: " notlive",
         matchTime: "76:23",
         startTime: new Date(now.getTime() - 2 * 60 * 60 * 1000), // 2 hours ago
         venue: "Old Trafford",
