@@ -106,7 +106,7 @@ export class MemStorage implements IStorage {
         startTime: new Date(now.getTime() - 1.2 * 60 * 60 * 1000), // 1.2 hours ago
         venue: "Parc des Princes",
         competition: "Champions League",
-        streamUrl: "https://example.com/stream4",
+        streamUrl: "https://cdn.brid.tv/live/partners/25680/sd/https://new.ptvcrickethd.com/pak/media.stream/playlist.m3u8",
         viewerCount: 35890,
         featured: true,
       }
