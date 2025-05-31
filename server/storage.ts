@@ -44,7 +44,7 @@ export class MemStorage implements IStorage {
     // Sample teams
     const sampleTeams: InsertTeam[] = [
       { name: "Arsenal FC", league: "Premier League", logo: "https://images.unsplash.com/photo-1553778263-73a83bab9b0c", wins: 20, draws: 14, losses: 4, primaryColor: "#FF0000" },
-      { name: "Chelsea FC", league: "Premier League", logo: "https://images.unsplash.com/photo-1551698618-1dfe5d97d256", wins: 20, draws: 9, losses: 9, primaryColor: "#0000FF" },
+      { name: "Chelsea FC", league: "Premier League", logo: "https://freshhub.netlify.app/chelsea.png", wins: 20, draws: 9, losses: 9, primaryColor: "#0000FF" },
       { name: "Manchester City", league: "Premier League", logo: "https://images.unsplash.com/photo-1508768787810-6adc1f613514", wins: 21, draws: 8, losses: 9, primaryColor: "#6CABDD" },
       { name: "Manchester United", league: "Premier League", logo: "https://images.unsplash.com/photo-1516832970803-325be7a92aa5", wins: 11, draws: 9, losses: 18, primaryColor: "#FF0000" },
       { name: "Liverpool FC", league: "Premier League", logo: "https://images.unsplash.com/photo-1574629810360-7efbbe195018", wins: 25, draws: 9, losses: 4, primaryColor: "#C8102E" },
