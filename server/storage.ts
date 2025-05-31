@@ -43,14 +43,14 @@ export class MemStorage implements IStorage {
   private initializeSampleData() {
     // Sample teams
     const sampleTeams: InsertTeam[] = [
-      { name: "Arsenal FC", league: "Premier League", logo: "https://images.unsplash.com/photo-1553778263-73a83bab9b0c", wins: 20, draws: 14, losses: 4, primaryColor: "#FF0000" },
+      { name: "Arsenal FC", league: "Premier League", logo: "https://freshhub.netlify.app/arsenal.png", wins: 20, draws: 14, losses: 4, primaryColor: "#FF0000" },
       { name: "Chelsea FC", league: "Premier League", logo: "https://freshhub.netlify.app/chelsea.png", wins: 20, draws: 9, losses: 9, primaryColor: "#0000FF" },
-      { name: "Manchester City", league: "Premier League", logo: "https://images.unsplash.com/photo-1508768787810-6adc1f613514", wins: 21, draws: 8, losses: 9, primaryColor: "#6CABDD" },
-      { name: "Manchester United", league: "Premier League", logo: "https://images.unsplash.com/photo-1516832970803-325be7a92aa5", wins: 11, draws: 9, losses: 18, primaryColor: "#FF0000" },
-      { name: "Liverpool FC", league: "Premier League", logo: "https://images.unsplash.com/photo-1574629810360-7efbbe195018", wins: 25, draws: 9, losses: 4, primaryColor: "#C8102E" },
+      { name: "Manchester City", league: "Premier League", logo: "https://freshhub.netlify.app/mancity.png", wins: 21, draws: 8, losses: 9, primaryColor: "#6CABDD" },
+      { name: "Manchester United", league: "Premier League", logo: "https://freshhub.netlify.app/manu.png", wins: 11, draws: 9, losses: 18, primaryColor: "#FF0000" },
+      { name: "Liverpool FC", league: "Premier League", logo: "https://freshhub.netlify.app/Liverpool.png", wins: 25, draws: 9, losses: 4, primaryColor: "#C8102E" },
       { name: "Tottenham", league: "Premier League", logo: "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d", wins: 11, draws: 5, losses: 22, primaryColor: "#132257" },
-      { name: "Paris Saint-Germain", league: "Ligue 1", logo: "https://images.unsplash.com/photo-1579952363873-27d3bfad9c0d", wins: 26, draws: 6, losses: 2, primaryColor: "#004170" },
-      { name: "Inter Milan", league: "Serie A", logo: "https://images.unsplash.com/photo-1593087899067-5cf5ac2861d2", wins: 24, draws: 9, losses: 5, primaryColor: "#0068A8" }
+      { name: "Paris Saint-Germain", league: "Ligue 1", logo: "https://freshhub.netlify.app/psg.png", wins: 26, draws: 6, losses: 2, primaryColor: "#004170" },
+      { name: "Inter Milan", league: "Serie A", logo: "https://freshhub.netlify.app/inter.png", wins: 24, draws: 9, losses: 5, primaryColor: "#0068A8" }
     ];
 
     sampleTeams.forEach(team => this.createTeam(team));
