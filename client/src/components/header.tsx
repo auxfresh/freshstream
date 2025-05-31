@@ -9,8 +9,9 @@ export default function Header() {
   const navigation = [
     { name: "Live Matches", href: "/", active: location === "/" },
     { name: "Teams", href: "/teams", active: location === "/teams" },
-    { name: "Live Stream", href: "/stream1", active: location === "/stream1" },
     { name: "Schedule", href: "/#schedule", active: false },
+    { name: "Stream 1", href: "/stream1.html", external: true, active: false },
+    { name: "Soccer TV HD", href: "https://www.soccertvhd.com/hesgoal-hes-goal-live-streaming/", external: true, active: false },
   ];
 
   return (
@@ -18,16 +19,20 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center space-x-8">
-            <a href="/stream1">
+            <Link href="/">
               <div className="flex items-center space-x-2 cursor-pointer">
                 <Play className="text-primary text-2xl" />
                 <span className="text-xl font-bold">Fresh Stream</span>
               </div>
-            </a>
+            </Link>
             <nav className="hidden md:flex space-x-6">
               {navigation.map((item) => (
-                <Link key={item.name} href={item.href}>
+                item.external ? (
                   <a
+                    key={item.name}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={`font-medium transition-colors ${
                       item.active
                         ? "text-primary"
@@ -36,30 +41,27 @@ export default function Header() {
                   >
                     {item.name}
                   </a>
-                </Link>
+                ) : (
+                  <Link key={item.name} href={item.href}>
+                    <a
+                      className={`font-medium transition-colors ${
+                        item.active
+                          ? "text-primary"
+                          : "text-gray-300 hover:text-white"
+                      }`}
+                    >
+                      {item.name}
+                    </a>
+                  </Link>
+                )
               ))}
             </nav>
           </div>
           
-          
           <div className="flex items-center space-x-4">
-import React from "react";
-
-const ExternalLinkButton: React.FC = () => {
-  return (
-    <a
-      href="https://example.com"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="inline-block bg-black text-orange-500 px-4 py-2 rounded-md border border-orange-500 hover:bg-orange-500 hover:text-black transition"
-    >
-      Visit Website
-    </a>
-  );
-};
-
-export default ExternalLinkButton;
-          </div>
+            <Button className="bg-primary text-white hover:bg-primary/90 transition-all">
+              Subscribe
+            </Button>
             
             <Sheet>
               <SheetTrigger asChild>
@@ -70,8 +72,12 @@ export default ExternalLinkButton;
               <SheetContent side="right" className="surface border-gray-700">
                 <nav className="flex flex-col space-y-4 mt-4">
                   {navigation.map((item) => (
-                    <Link key={item.name} href={item.href}>
+                    item.external ? (
                       <a
+                        key={item.name}
+                        href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className={`font-medium transition-colors ${
                           item.active
                             ? "text-primary"
@@ -80,7 +86,19 @@ export default ExternalLinkButton;
                       >
                         {item.name}
                       </a>
-                    </Link>
+                    ) : (
+                      <Link key={item.name} href={item.href}>
+                        <a
+                          className={`font-medium transition-colors ${
+                            item.active
+                              ? "text-primary"
+                              : "text-gray-300 hover:text-white"
+                          }`}
+                        >
+                          {item.name}
+                        </a>
+                      </Link>
+                    )
                   ))}
                 </nav>
               </SheetContent>
