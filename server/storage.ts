@@ -50,7 +50,7 @@ export class MemStorage implements IStorage {
       { name: "Liverpool FC", league: "Premier League", logo: "https://freshhub.netlify.app/Liverpool.png", wins: 25, draws: 9, losses: 4, primaryColor: "#C8102E" },
       { name: "Tottenham", league: "Premier League", logo: "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d", wins: 11, draws: 5, losses: 22, primaryColor: "#132257" },
       { name: "Paris Saint-Germain", league: "Ligue 1", logo: "https://freshhub.netlify.app/psg.png", wins: 26, draws: 6, losses: 2, primaryColor: "#004170" },
-      { name: "Inter Milan", league: "Serie A", logo: "https://freshhub.netlify.app/inter.png", wins: 24, draws: 9, losses: 5, primaryColor: "#0068A8" }
+      { name: "Inter Milan", league: "Serie A", logo: "https://freshhub.netlify.app/milan.png", wins: 24, draws: 9, losses: 5, primaryColor: "#0068A8" }
     ];
 
     sampleTeams.forEach(team => this.createTeam(team));
