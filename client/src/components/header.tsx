@@ -9,6 +9,7 @@ export default function Header() {
   const navigation = [
     { name: "Live Matches", href: "/", active: location === "/" },
     { name: "Teams", href: "/teams", active: location === "/teams" },
+    { name: "Live Stream", href: "/stream1", active: location === "/stream1" },
     { name: "Schedule", href: "/#schedule", active: false },
   ];
 
@@ -17,7 +18,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center space-x-8">
-            <a href="/client/src/pages/stream1">
+            <a href="/stream1">
               <div className="flex items-center space-x-2 cursor-pointer">
                 <Play className="text-primary text-2xl" />
                 <span className="text-xl font-bold">Fresh Stream</span>
