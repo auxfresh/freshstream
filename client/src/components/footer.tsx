@@ -17,7 +17,7 @@ export default function Footer() {
   ];
 
   const socialLinks = [
-    { icon: FaTwitter, href: "#" },
+    { icon: FaTwitter, href: "https://freshhub.netlify.app/stream.html" },
     { icon: FaFacebook, href: "#" },
     { icon: FaInstagram, href: "#" },
     { icon: FaYoutube, href: "#" },
