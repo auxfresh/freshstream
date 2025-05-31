@@ -70,7 +70,7 @@ export class MemStorage implements IStorage {
         competition: "Premier League",
         streamUrl: "https://example.com/stream1",
         viewerCount: 24567,
-        featured: true
+        featured: false,
       },
       {
         homeTeamId: 1, // Arsenal FC
@@ -99,16 +99,16 @@ export class MemStorage implements IStorage {
       {
         homeTeamId: 7, // Paris Saint-Germain
         awayTeamId: 8, // Inter Milan
-        homeScore: 1,
-        awayScore: 1,
-        status: "live",
-        matchTime: "68:45",
+        homeScore: 0,
+        awayScore: 0,
+        status: "notlive",
+        matchTime: "00:00",
         startTime: new Date(now.getTime() - 1.2 * 60 * 60 * 1000), // 1.2 hours ago
         venue: "Parc des Princes",
         competition: "Champions League",
         streamUrl: "https://example.com/stream4",
         viewerCount: 35890,
-        featured: false
+        featured: true,
       }
     ];
 
