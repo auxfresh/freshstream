@@ -22,7 +22,7 @@ export default function Header() {
             <Link href="/">
               <div className="flex items-center space-x-2 cursor-pointer">
                 <Play className="text-primary text-2xl" />
-                <span className="text-xl font-bold">Fresh Stream</span>
+                <span className="text-xl font-bold">Fresh LiveStream</span>
               </div>
             </Link>
             <nav className="hidden md:flex space-x-6">
